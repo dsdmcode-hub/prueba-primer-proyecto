@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tiempo Semanal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="main-header">
+        <h1>Mi Gestor de Tiempo</h1>
+        <p>Planificación de la semana actual</p>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="app-container">
+        
+        <!-- Navegación de los Días de la Semana -->
+        <nav class="days-nav">
+            <button class="day-btn active">Lunes</button>
+            <button class="day-btn">Martes</button>
+            <button class="day-btn">Miércoles</button>
+            <button class="day-btn">Jueves</button>
+            <button class="day-btn">Viernes</button>
+            <button class="day-btn">Sábado</button>
+            <button class="day-btn">Domingo</button>
+        </nav>
+
+        <!-- Sección de Agenda Diaria -->
+        <section class="schedule-section">
+            <h2 id="current-day-title">Horario de Lunes</h2>
+            
+            <!-- Contenedor dinámico controlado por JavaScript -->
+            <div id="time-slots-container" class="time-slots-container"></div>
+
+            <!-- Botón de Guardar -->
+            <div class="actions-container">
+                <button id="save-btn" class="save-btn">Guardar Horario</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Archivo de Lógica -->
+    <script src="script.js"></script>
+</body>
+</html>

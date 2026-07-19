@@ -1,0 +1,172 @@
+/* Variables de diseño - Color Rojo de tu equipo */
+:root {
+    --primary-color: #d32f2f;      /* Rojo principal */
+    --primary-hover: #b71c1c;      /* Rojo oscuro para efectos */
+    --light-bg: #f8f9fa;           /* Fondo gris claro */
+    --white: #ffffff;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --radius: 8px;
+}
+
+/* Estilos Base y Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+.main-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.main-header p {
+    color: var(--text-muted);
+}
+
+/* Contenedor de la Aplicación */
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border-top: 5px solid var(--primary-color);
+}
+
+/* Navegación por Días */
+.days-nav {
+    display: flex;
+    overflow-x: auto;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.day-btn {
+    flex: 1;
+    min-width: 90px;
+    padding: 15px 10px;
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.day-btn:hover {
+    color: var(--primary-color);
+    background-color: rgba(211, 47, 47, 0.05);
+}
+
+.day-btn.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+/* Sección de Agenda */
+.schedule-section {
+    padding: 25px;
+}
+
+.current-day-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+/* Contenedor de las Horas */
+.time-slots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Bloques de fila (Hora - Input) */
+.time-slot {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--white);
+    transition: border-color 0.2s;
+}
+
+.time-slot:focus-within {
+    border-color: var(--primary-color);
+}
+
+/* Etiqueta del Horario */
+.time-label {
+    background-color: rgba(211, 47, 47, 0.08);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 12px 15px;
+    min-width: 130px;
+    text-align: center;
+    border-right: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* Campo de entrada de Tarea */
+.task-input-container {
+    flex: 1;
+}
+
+.task-input-container input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.task-input-container input::placeholder {
+    color: #adb5bd;
+}
+
+/* Botón de Acción */
+.actions-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+    background-color: var(--primary-hover);
+}
